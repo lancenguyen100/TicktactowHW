@@ -40,6 +40,10 @@
 
 
 
+
+
+
+
 //Indicator to track player's turn
 //Changes turn by switching value of indicator(TOKEN)
 let playerTurn = true
@@ -48,6 +52,7 @@ let playerTurn = true
 let turns = 0
 let playerDisplayX = "X"
 let playerDisplayO = "O"
+
 
 
 //ID state to refer later in the game
@@ -70,7 +75,7 @@ let gameArray = [true, true, true, true, true, true, true, true, true]
 
 //Event to determine "X" || "O" goes inside box
 b1.addEventListener("click", function (event){
-    if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+    if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
         if (gameArray[0] === true){
             if (playerTurn === true){
                 // console.log("Yo!")
@@ -87,7 +92,7 @@ b1.addEventListener("click", function (event){
 })
 
 b2.addEventListener("click", function (event){
-    if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+    if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
         if (gameArray[1] === true){
             if (playerTurn === true){
                 // console.log("Yo!")
@@ -104,7 +109,7 @@ b2.addEventListener("click", function (event){
 })
 
 b3.addEventListener("click", function (event){
-    if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+    if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
         if (gameArray[2] === true){
             if (playerTurn === true){
                 // console.log("Yo!")
@@ -121,7 +126,7 @@ b3.addEventListener("click", function (event){
 })
 
 b4.addEventListener("click", function (event){
-    if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+    if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
         if (gameArray[3] === true){
             if (playerTurn === true){
                 // console.log("Yo!")
@@ -138,7 +143,7 @@ b4.addEventListener("click", function (event){
 })
 
 b5.addEventListener("click", function (event){
-    if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+    if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
         if (gameArray[4] === true){
             if (playerTurn === true){
                 // console.log("Yo!")
@@ -155,7 +160,7 @@ b5.addEventListener("click", function (event){
 })
 
 b6.addEventListener("click", function (event){
-    if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+    if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
         if (gameArray[5] === true){
             if (playerTurn === true){
                 // console.log("Yo!")
@@ -172,7 +177,7 @@ b6.addEventListener("click", function (event){
 })
 
 b7.addEventListener("click", function (event){
-    if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+    if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
         if (gameArray[6] === true){
             if (playerTurn === true){
                 // console.log("Yo!")
@@ -189,7 +194,7 @@ b7.addEventListener("click", function (event){
 })
 
 b8.addEventListener("click", function (event){
-    if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+    if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
         if (gameArray[7] === true){
             if (playerTurn === true){
                 // console.log("Yo!")
@@ -206,7 +211,7 @@ b8.addEventListener("click", function (event){
 })
 
 b9.addEventListener("click", function (event){
-    if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+    if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
         if (gameArray[8] === true){
             if (playerTurn === true){
                 // console.log("Yo!")
@@ -233,9 +238,9 @@ function checkWin (){
         b1.innerText != "" && b1.innerText === b5.innerText && b1.innerText === b9.innerText ||
         b3.innerText != "" && b3.innerText === b5.innerText && b3.innerText === b7.innerText
     ){ 
+        
 
-          
-
+        
 
  document.getElementById("winner").innerText = "WINNER HAS BEEN CROWNED! + playerDisplay + HAS WON!"
         endGame.innerText = "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"
@@ -246,6 +251,7 @@ function checkWin (){
 //Check/Display the turn of players(Draw condition is questionable)
     //   if (turns === 9) {
     //     document.getElementById("winner").innerText = "It's a Tie. Click Restart Game! to play again!"
+
       if (turns === 1) {
         document.getElementById("player-turn").innerText = "Player O Turn!"
     } if (turns === 2) {
@@ -279,15 +285,22 @@ restartButton.addEventListener('click', function (event){
 
 
 
-//COPY JUST IN CASE CODE ABOVE BREAKS!!! DON'T DELETE!
 
-//  //Indicator to track player's turn
+
+ 
+
+
+//COPY OF CODES ABOVE JUST IN CASE IT BREAKS! DON'T DELETE!!!!
+
+// //Indicator to track player's turn
 // //Changes turn by switching value of indicator(TOKEN)
 // let playerTurn = true
 
 // //Keep track of turns to end game in a draw state
 // let turns = 0
-// let playerDisplay = "Win"
+// let playerDisplayX = "X"
+// let playerDisplayO = "O"
+
 
 
 // //ID state to refer later in the game
@@ -305,13 +318,13 @@ restartButton.addEventListener('click', function (event){
 
 
 // //Array to keep track of squares
-// let truthArray = [true, true, true, true, true, true, true, true, true]
+// let gameArray = [true, true, true, true, true, true, true, true, true]
 
 
 // //Event to determine "X" || "O" goes inside box
 // b1.addEventListener("click", function (event){
-//     if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplay + " HAS WON!"){
-//         if (truthArray[0] === true){
+//     if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+//         if (gameArray[0] === true){
 //             if (playerTurn === true){
 //                 // console.log("Yo!")
 //                 b1.innerText = ("X")
@@ -321,14 +334,14 @@ restartButton.addEventListener('click', function (event){
 //                 playerTurn = true
 //             }
 //             turns = turns +1
-//             truthArray[0] = false
+//             gameArray[0] = false
 //         }   checkWin ()
 //     }
 // })
 
 // b2.addEventListener("click", function (event){
-//     if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplay + " HAS WON!"){
-//         if (truthArray[1] === true){
+//     if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+//         if (gameArray[1] === true){
 //             if (playerTurn === true){
 //                 // console.log("Yo!")
 //                 b2.innerText = ("X")
@@ -338,14 +351,14 @@ restartButton.addEventListener('click', function (event){
 //                 playerTurn = true
 //             }
 //             turns = turns +1
-//             truthArray[1] = false
+//             gameArray[1] = false
 //         }   checkWin ()
 //     }
 // })
 
 // b3.addEventListener("click", function (event){
-//     if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplay + " HAS WON!"){
-//         if (truthArray[2] === true){
+//     if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+//         if (gameArray[2] === true){
 //             if (playerTurn === true){
 //                 // console.log("Yo!")
 //                 b3.innerText = ("X")
@@ -355,14 +368,14 @@ restartButton.addEventListener('click', function (event){
 //                 playerTurn = true
 //             }
 //             turns = turns +1
-//             truthArray[2] = false
+//             gameArray[2] = false
 //         }   checkWin ()
 //     }
 // })
 
 // b4.addEventListener("click", function (event){
-//     if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplay + " HAS WON!"){
-//         if (truthArray[3] === true){
+//     if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+//         if (gameArray[3] === true){
 //             if (playerTurn === true){
 //                 // console.log("Yo!")
 //                 b4.innerText = ("X")
@@ -372,14 +385,14 @@ restartButton.addEventListener('click', function (event){
 //                 playerTurn = true
 //             }
 //             turns = turns +1
-//             truthArray[3] = false
+//             gameArray[3] = false
 //         }   checkWin ()
 //     }
 // })
 
 // b5.addEventListener("click", function (event){
-//     if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplay + " HAS WON!"){
-//         if (truthArray[4] === true){
+//     if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+//         if (gameArray[4] === true){
 //             if (playerTurn === true){
 //                 // console.log("Yo!")
 //                 b5.innerText = ("X")
@@ -389,14 +402,14 @@ restartButton.addEventListener('click', function (event){
 //                 playerTurn = true
 //             }
 //             turns = turns +1
-//             truthArray[4] = false
+//             gameArray[4] = false
 //         }   checkWin ()
 //     }
 // })
 
 // b6.addEventListener("click", function (event){
-//     if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplay + " HAS WON!"){
-//         if (truthArray[5] === true){
+//     if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+//         if (gameArray[5] === true){
 //             if (playerTurn === true){
 //                 // console.log("Yo!")
 //                 b6.innerText = ("X")
@@ -406,14 +419,14 @@ restartButton.addEventListener('click', function (event){
 //                 playerTurn = true
 //             }
 //             turns = turns +1
-//             truthArray[5] = false
+//             gameArray[5] = false
 //         }   checkWin ()
 //     }
 // })
 
 // b7.addEventListener("click", function (event){
-//     if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplay + " HAS WON!"){
-//         if (truthArray[6] === true){
+//     if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+//         if (gameArray[6] === true){
 //             if (playerTurn === true){
 //                 // console.log("Yo!")
 //                 b7.innerText = ("X")
@@ -423,14 +436,14 @@ restartButton.addEventListener('click', function (event){
 //                 playerTurn = true
 //             }
 //             turns = turns +1
-//             truthArray[6] = false
+//             gameArray[6] = false
 //         }   checkWin ()
 //     }
 // })
 
 // b8.addEventListener("click", function (event){
-//     if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplay + " HAS WON!"){
-//         if (truthArray[7] === true){
+//     if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+//         if (gameArray[7] === true){
 //             if (playerTurn === true){
 //                 // console.log("Yo!")
 //                 b8.innerText = ("X")
@@ -440,14 +453,14 @@ restartButton.addEventListener('click', function (event){
 //                 playerTurn = true
 //             }
 //             turns = turns +1
-//             truthArray[7] = false
+//             gameArray[7] = false
 //         }   checkWin ()
 //     }
 // })
 
 // b9.addEventListener("click", function (event){
-//     if (endGame.innerText!= "WINNER HAS BEEN CROWNED! " + playerDisplay + " HAS WON!"){
-//         if (truthArray[8] === true){
+//     if (endGame.innerText != "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"){
+//         if (gameArray[8] === true){
 //             if (playerTurn === true){
 //                 // console.log("Yo!")
 //                 b9.innerText = ("X")
@@ -457,7 +470,7 @@ restartButton.addEventListener('click', function (event){
 //                 playerTurn = true
 //             }
 //             turns = turns +1
-//             truthArray[8] = false
+//             gameArray[8] = false
 //         }   checkWin ()
 //     }
 // })
@@ -472,17 +485,22 @@ restartButton.addEventListener('click', function (event){
 //         b3.innerText != "" && b3.innerText === b6.innerText && b3.innerText === b9.innerText ||
 //         b1.innerText != "" && b1.innerText === b5.innerText && b1.innerText === b9.innerText ||
 //         b3.innerText != "" && b3.innerText === b5.innerText && b3.innerText === b7.innerText
-//     ){
+//     ){ 
+        
 
-//  //document.getElementById("winner").innerText = "WINNER HAS BEEN CROWNED! + playerDisplay + HAS WON!"
-//         endGame.innerText = "WINNER HAS BEEN CROWNED! " + playerDisplay + " HAS WON!"
+        
+
+//  document.getElementById("winner").innerText = "WINNER HAS BEEN CROWNED! + playerDisplay + HAS WON!"
+//         endGame.innerText = "WINNER HAS BEEN CROWNED! " + playerDisplayX || playerDisplayO + " HAS WON!"
 //         // console.log("Winner HAS BEEN CROWNED!")
-//     }
+    
+//     } else if (turns === 9) {document.getElementById("winner").innerText = "It's a Tie. Click Restart Game! to play again!"}
 
-// //Check/Display the turn of players
-//     if (turns === 9) {
-//         document.getElementById("winner").innerText = "It's a Tie. Click Restart Game! to play again!"
-//     } if (turns === 1) {
+// //Check/Display the turn of players(Draw condition is questionable)
+//     //   if (turns === 9) {
+//     //     document.getElementById("winner").innerText = "It's a Tie. Click Restart Game! to play again!"
+
+//       if (turns === 1) {
 //         document.getElementById("player-turn").innerText = "Player O Turn!"
 //     } if (turns === 2) {
 //         document.getElementById("player-turn").innerText = "Player X Turn!"
@@ -498,9 +516,10 @@ restartButton.addEventListener('click', function (event){
 //         document.getElementById("player-turn").innerText = "Player O Turn!"
 //     } if (turns === 8) {
 //         document.getElementById("player-turn").innerText = "Player X Turn!"
+//     } if (turns === 9) {
+//         document.getElementById("player-turn").innerText = "Player O Turn!"
 //     }   
 // }
-
 
 // restartButton.addEventListener('click', function (event){
 //     location.reload()
@@ -513,4 +532,3 @@ restartButton.addEventListener('click', function (event){
 
 
 
- 
