@@ -41,5 +41,9 @@ body {
     color: blue;
 }
 
+#restartButton:hover {
+    background-color: aqua;
+}
+
 
 
